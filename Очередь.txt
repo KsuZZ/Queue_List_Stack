@@ -1,0 +1,7 @@
+function Q = inquene(Q, x)
+Q=[Q x]; Q(end)=x;
+
+///////////////////////////////////////
+
+function [Q, x] = dequene(Q)
+x=Q(1); Q=Q(2:end);
