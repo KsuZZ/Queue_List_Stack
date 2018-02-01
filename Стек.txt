@@ -1,0 +1,24 @@
+%Стек
+%steck=struct('next', n, 'prev', p)  %stack.next);
+function stack=PUSH(stack,y)   %добавление элемента
+global stack_size
+stack_size=length(stack);
+if length(stack)<stack_size
+    disp('переполнение')
+else 
+    stack=[y stack];
+end
+
+
+% next(steck(/) %ссылка на значение следующего элемента
+%stack(/)=[]  %удалить элемент
+
+///////////////////////////////////////////////////////////////////////////
+
+function stack=POP(stack)  %x=POP(stack, x)      %удаление элемента
+if isempty(stack)
+    disp('переполнение')
+else
+    x=stack(1);
+    stack=stack(2:end);
+end
